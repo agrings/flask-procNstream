@@ -1,5 +1,5 @@
 # flask-procNstream
-Execute an external process (shell) and show the output stream
+Executes an external process (shell) and showing the output stream
 
 References:
 
