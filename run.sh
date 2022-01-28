@@ -1,2 +1,2 @@
-export FLASK_APP=test.py
+export FLASK_APP=main.py
 flask run
