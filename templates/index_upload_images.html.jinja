@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <title>procNstream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">
+</head>
+<body>
+<h1>File Upload</h1>
+    <form action="{{ url_for('upload_files') }}" class="dropzone">
+    </form>
+    <ul>
+    {% for file in files %}
+    <li>
+        <a href="{{ (request.path + '/' if request.path != '/' else '') + file }}">
+            {{ (request.path + '/' if request.path != '/' else '') + file }}
+        </a>
+    </li>
+    {% endfor %}
+   </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>    
+    <div>
+        <iframe frameborder="0" noresize="noresize"
+     style='background: transparent; width: 100%; height:100%;' src="{{ url_for('content')}}"></iframe>
+    </div>
+
+</body>
+
+
+
